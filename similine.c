@@ -164,7 +164,7 @@ void process(const char *f, double threshold) {
 	struct stat sb;
 	int infile = open(f, O_RDONLY);
 	fstat(infile, &sb);	//get the file size (among other things)
-	void *ls = mmap(NULL, (size_t)sb.st_size, PROT_READ | PROT_WRITE, MAP_PRIVATE, infile, 0);
+	void *ls = mmap(NULL, (size_t)sb.st_size, PROT_READ, MAP_PRIVATE, infile, 0);
 
 	//we want to operate line by line, so we'll need two things...
 	lines = malloc(sizeof(char*)*lines_size);	//...a pointer to the beginning of each line...
