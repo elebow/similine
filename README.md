@@ -23,4 +23,4 @@ There are several common algorithms for measuring similarity of text. I briefly 
 
 ## Dependencies
 
-Just libc, I think. Tested only with glibc on GNU/Linux.
+libpopt. Tested only with glibc on GNU/Linux.
