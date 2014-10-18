@@ -200,6 +200,8 @@ void process(const char *f, double threshold) {
 
 	free(lines);
 	free(line_lengths);
+	munmap(ls, (size_t)sb.st_size);
+	close(infile);
 
 	return;
 }
